@@ -37,6 +37,8 @@ class Board
             raise "No piece at this start position"
         elsif @board[row2][col2] != nil || row2 < 0 || row2 > 7 || col2 < 0 || col2 > 7
             raise "position invalid/taken"
+        else
+            @board[row1][col1], @board[row2][col2] = @board[row2][col2], @board[row1][col1]
         end
     end
 
