@@ -18,20 +18,27 @@ class Board
                 end
             else
                 row.each_with_index do |spot, idx2|
-                    @board[idx][idx2] = NullPiece.new('nullpiece')
+                    @board[idx][idx2] = nil
                 end
             end
         end
     end
 
-
     def print
-
         @board.each do |row| 
             puts row
         end
     end
 
+    def move_piece(start_pos, end_pos)
+        row1, col1 = start_pos
+        row2, col2 = end_pos
+        if @board[row1][col1] == nil
+            raise "No piece at this start position"
+        elsif @board[row2][col2] != nil || row2 < 0 || row2 > 7 || col2 < 0 || col2 > 7
+            raise "position invalid/taken"
+        end
+    end
 
 
 end
