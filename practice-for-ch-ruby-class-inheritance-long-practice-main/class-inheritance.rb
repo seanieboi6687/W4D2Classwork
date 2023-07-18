@@ -6,6 +6,7 @@ class Employee
         @title = title
         @salary = salary
         @boss = boss
+        @boss.add_employee(self) if boss != nil
     end
 
     def bonus(multiplier)
@@ -29,7 +30,11 @@ class Manager < Employee
     def total_salary
         salary_sum = 0
         @employees.each do |employee|
-            salary_sum += employee.salary
+            if employee.is_a?(Manager)
+                salary_sum += employee.total_salary + employee.salary
+            else
+                salary_sum += employee.salary
+            end
         end
         return salary_sum
     end
