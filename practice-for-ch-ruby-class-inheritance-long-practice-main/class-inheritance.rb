@@ -29,6 +29,7 @@ class Manager < Employee
         @employees.each do |employee|
             salary_sum += employee.salary
         end
+        return salary_sum
     end
 
     def add_employee(employee)
@@ -36,8 +37,8 @@ class Manager < Employee
     end
 end
 
-darren = Manager.new("darren", "manager", 78000, nil)
-david = Employee.new("david", "TA", 12000, darren)
+# darren = Manager.new("darren", "manager", 78000, nil)
+# david = Employee.new("david", "TA", 12000, darren)
 
-darren.bonus(4) # => 88_000
-david.bonus(3) # => 30_000
+# darren.bonus(4) # => 88_000
+# david.bonus(3) # => 30_000
