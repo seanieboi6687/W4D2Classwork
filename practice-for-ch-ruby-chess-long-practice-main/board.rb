@@ -14,7 +14,7 @@ class Board
         @board.each_with_index do |row, idx|
             if idx >=0 && idx < 2 || idx > 5 && idx <= 7
                 row.each_with_index do |spot, idx2|
-                    @board[idx][idx2] = Piece.new('piece')
+                    @board[idx][idx2] = Piece.new('piece', self)
                 end
             else
                 row.each_with_index do |spot, idx2|
