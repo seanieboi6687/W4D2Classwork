@@ -52,5 +52,12 @@ class Board
         end
     end
 
+    def add_piece(piece, pos)
+
+    end
+
+    def valid_pos?(pos)
+
+    end
 
 end
