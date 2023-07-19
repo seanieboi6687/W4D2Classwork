@@ -11,8 +11,8 @@ attr_reader :name
     end
 
     def to_s
-
-    end
+        "#{@color}"
+    end 
 
     def empty?
         false
