@@ -12,9 +12,13 @@ class Board
 
     def populate
         @board.each_with_index do |row, idx|
-            if idx >=0 && idx < 2 || idx > 5 && idx <= 7
+            if idx >=0 && idx < 2
                 row.each_with_index do |spot, idx2|
                     @board[idx][idx2] = Piece.new(:black, self, [idx, idx2])
+                end
+            elsif idx > 5 && idx <= 7
+                row.each_with_index do |spot, idx2|
+                    @board[idx][idx2] = Piece.new(:white, self, [idx, idx2])
                 end
             else
                 row.each_with_index do |spot, idx2|
