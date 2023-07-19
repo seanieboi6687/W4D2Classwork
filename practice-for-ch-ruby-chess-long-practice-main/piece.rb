@@ -10,7 +10,28 @@ attr_reader :name
         @board.add_piece(self, pos)
     end
 
-    def moves
+    def to_s
 
+    end
+
+    def empty?
+        false
+    end
+
+    def valid_moves
+
+    end
+
+    def pos=(val)
+
+    end
+
+    def symbol
+
+    end
+
+    private
+    def move_into_check?(end_pos)
+        
     end
 end

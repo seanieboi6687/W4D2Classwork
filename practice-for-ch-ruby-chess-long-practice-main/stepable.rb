@@ -17,6 +17,11 @@ module Stepable
 
         moves
     end
+
+    private
+    def move_diffs
+        raise "move_diffs method not specified within its class" 
+    end
             
 
 end

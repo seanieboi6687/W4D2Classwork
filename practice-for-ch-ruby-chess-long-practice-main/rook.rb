@@ -5,7 +5,7 @@ class Rook <  Piece
     def symbol
         ‘♖’.colorize(color)
     end
-    protected
+    private
     def move_dirs
         horizontal_and_vertical_dirs
     end

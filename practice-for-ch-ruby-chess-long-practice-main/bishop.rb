@@ -5,7 +5,7 @@ class Bishop <  Piece
     def symbol
         '♗'.colorize(color)
     end
-    protected
+    private
     def move_dirs
         diagonal_dirs
     end
