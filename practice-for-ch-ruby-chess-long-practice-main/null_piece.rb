@@ -1,7 +1,18 @@
+require 'singleton'
 class NullPiece 
-    attr_reader :name
-    def initialize(name)
-        @name = name
+    include Singleton
+
+    def initialize
+        @name = ""
+        @color = :none
+    end
+
+    def empty?
+        true
+    end
+
+    def symbol
+        nil
     end
 
 end
