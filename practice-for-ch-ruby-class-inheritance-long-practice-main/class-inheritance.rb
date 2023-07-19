@@ -12,6 +12,10 @@ class Employee
     def bonus(multiplier)
         return @salary * multiplier
     end
+
+    def boss=(boss)
+
+    end
 end
 
 class Manager < Employee

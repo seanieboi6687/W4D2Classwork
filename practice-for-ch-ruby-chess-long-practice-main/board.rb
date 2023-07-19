@@ -4,7 +4,7 @@ require_relative 'null_piece'
 class Board 
     attr_accessor :board
     def initialize
-        @board = Array.new(8) { Array.new(8)}
+        @board = Array.new(8) { Array.new(8, NullPiece.new)}
 
         self.populate
     end
