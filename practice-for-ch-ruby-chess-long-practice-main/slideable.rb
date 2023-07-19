@@ -35,6 +35,9 @@ module Slideable
     ].freeze
 
 
+    def move_dirs
+        raise "move_dir method not specified within its class"
+    end
     def grow_unblocked_moves_in_dir(dx, dy)
         cur_x, cur_y = pos
         moves = []

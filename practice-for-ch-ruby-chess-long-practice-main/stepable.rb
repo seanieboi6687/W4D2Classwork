@@ -3,7 +3,7 @@ module Stepable
     def moves 
         moves = []
         cur_x,cur_y = pos
-        move_dirs.each do |dx,dy|
+        move_diffs.each do |dx,dy|
             poss_pos = [cur_x + dx, cur_y + dy]
             if board.valid_pos?(poss_pos)
                 if board.empty?(poss_pos)

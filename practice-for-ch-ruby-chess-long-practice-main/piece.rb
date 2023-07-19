@@ -1,3 +1,4 @@
+
 class Piece
 attr_reader :name
     def initialize(symbol, board, position)
